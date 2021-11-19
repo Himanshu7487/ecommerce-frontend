@@ -1,0 +1,19 @@
+#main {
+    display: flex;
+    min-height: calc(100vh - 20vh);
+}
+
+#main>article {
+    flex-grow: 1
+}
+
+header,footer {
+    height: 10vh;
+}
+
+footer {
+    background-color: blue;
+}
+header {
+    background-color: white;
+}
