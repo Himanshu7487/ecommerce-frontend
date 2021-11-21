@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 export function Header(){
     return(
         <div>
@@ -20,7 +22,8 @@ export function Header(){
               <li className='mr-5'></li>
               <li className='mr-5'>
               <i className="fas fa-cart-plus"></i>
-              <i className='fa fa-sign-in fa-2x' aria-hidden='true'></i>
+               {/* <Link to={`${url}/map`}>Map</Link> */}
+              <Link to={"/login"}><i className='fa fa-sign-in fa-2x' aria-hidden='true'></i></Link>
               <i className='fa fa-user-plus fa-2x ml-5' aria-hidden='true'></i>
               </li>
               <li className='mr-5' >
