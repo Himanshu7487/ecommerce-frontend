@@ -3,7 +3,9 @@ import {Link} from 'react-router-dom'
 const API_KEY = process.env.REACT_APP_API_KEY;
 const ProductListDetails = ({product}) => {
     console.log(product,"Hello");
+    
     return (
+
         
             <div className="col-lg-3 col-md-4 col-sm-12">
                 <div className="card mt-2 h-100">

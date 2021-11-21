@@ -17,8 +17,9 @@ export function Header(){
                   </li>
               </ul>
               <ul className="nav navbar-right">
-              <li className='mr-5'>No CartItems</li>
+              <li className='mr-5'></li>
               <li className='mr-5'>
+              <i className="fas fa-cart-plus"></i>
               <i className='fa fa-sign-in fa-2x' aria-hidden='true'></i>
               <i className='fa fa-user-plus fa-2x ml-5' aria-hidden='true'></i>
               </li>

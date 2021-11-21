@@ -8,11 +8,13 @@ import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.min.css";
 
 
+
 function App() {
   return (
      <Provider store={store}>
    <div className="App">
      <Layout/>
+     
    </div>
      </Provider>
   );
