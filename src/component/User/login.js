@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useFormik } from "formik";
 // import axios from 'axios'
 import * as Yup from "yup";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { userLogin } from "../../Action/UserAction";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router";
 
 export const Login = () => {
+    const isLoggedIn = useSelector((state) => state.UserReducer.isLoggedIn);
     const dispatch = useDispatch();
     const location = useLocation();
     const navigate = useNavigate ();
@@ -15,6 +16,7 @@ export const Login = () => {
         username: Yup.string().required("Name is Required"),
         password: Yup.string().required("password is Required"),
     });
+    
     const onSuccess = () =>{
         Swal.fire({
             icon: 'Success',
@@ -48,6 +50,11 @@ export const Login = () => {
             dispatch(userLogin({username,password},onSuccess,onFailure))
         }
     });
+    useEffect(() => {
+        if (isLoggedIn) {
+          navigate("/products");
+        }
+      }, [isLoggedIn]);
     return (
         <div className="h-50 w-50 ml-5 mt-5">
             <form onSubmit={formik.handleSubmit} className="d-block"  >
