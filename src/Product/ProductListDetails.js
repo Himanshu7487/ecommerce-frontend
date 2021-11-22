@@ -19,8 +19,9 @@ const ProductListDetails = ({ product, forcart }) => {
     //   const arr = [prod];
     //   localStorage.setItem("cart", JSON.stringify(arr));
     // }
-
-    const { data } = await axios.post(`http://localhost:4000/cart/addCart`,{productname:prod.productname,price:prod.price, userId:user._id});
+    
+    const { data } = await axios.post(`http://localhost:4000/cart/addCart`,{productname:prod.productname,price:prod.price, userId:user._id,quantity:prod.quantity});
+    
     return data;
 
   };

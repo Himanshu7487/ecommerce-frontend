@@ -8,7 +8,7 @@ const ProductList = () => {
     const dispatch = useDispatch();
     const loading = useSelector(state => state.ProductReducer.loading);
     const products = useSelector(state => state.ProductReducer.product);
-console.log("product in list", products);
+    console.log("product in list", products);
     useEffect(() => {
         dispatch(fetchProducts())
     }, [])

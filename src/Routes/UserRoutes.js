@@ -5,6 +5,9 @@ import { Login } from "../component/User/login";
 import { Header } from "../Layout/Header";
 import ProductList from "../Product/ProductList";
 import Cart from "../component/cart/cart";
+// import dashboard from "../component/Dashboard/Dashboard";
+import Dashboard from "../component/Dashboard/Dashboard";
+// import Dashboard from "../component/Dashboard/Dashboard";
 
 const UserRoutes = () => {
   return (
@@ -15,6 +18,9 @@ const UserRoutes = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route exact path="/products" element={<ProductList />} />
         <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/dashboard" element={<Dashboard/>} />
+        {/* <Route exact path="/dashboard" element={<Dashboard />} /> */}
+
         {/* <Route exact path="/" element={<Navigate replace to="/products" />} /> */}
         {/* <Route path="/cart/add/:id" element={isLoggedIn ? <ProductList/> : <Login/> } /> */}
         {/* <Route path="/" element={<Navigate replace to="/products" />} /> */}

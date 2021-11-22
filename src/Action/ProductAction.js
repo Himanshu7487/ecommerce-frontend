@@ -77,6 +77,33 @@ export const deleteProduct = id =>{
     }
 }
 
+
+
 export const deleteProductSuccess = data =>({type: DELETE_PRODUCT_SUCCESS, data});
 
 export const deleteProductFailure =()=> ({type: DELETE_PRODUCT_FAILURE});
+
+
+
+
+// export const deleteProduct=(productid)=>dispatch=>{
+// axios.post('http://localhost:4000/product/delete/' , {productid}).then(res=>{
+
+//     console.log(res);
+//     alert('Product deleted successfully')
+   
+
+
+//   }).catch(err=>{
+//     console.log(err)
+
+//   })
+// }
+
+
+
+
+
+
+
+
